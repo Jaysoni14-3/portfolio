@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-slate-200 font-display;
+}
+
+p {
+  @apply text-slate-400 text-lg leading-relaxed font-body;
+}
+
+.max-container {
+  @apply max-w-[1024px] mx-auto;
+}
+
+.hero-image-border-radius {
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+}
+
+.project-card:nth-child(even) {
+  @apply sm:flex-row-reverse;
+}
+
+.project-btn {
+  @apply flex items-center font-medium text-slate-200 gap-2 p-2 hover:text-emerald-300;
+}
+
+.project-image-container {
+  display: block;
+  max-height: 330px;
+  transform: translateY(0);
+  transition: 8s ease-in-out;
+}
+
+.project-image-container:hover .project-image {
+  transform: translateY(calc(-100% + 330px));
+  transition: 8s ease-in-out;
+}
