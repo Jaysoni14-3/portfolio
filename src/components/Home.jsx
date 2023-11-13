@@ -1,4 +1,5 @@
-import JayImage from "../assets/Jay-image.jpeg";
+import JayImage from "../assets/hero-bg-image.png";
+
 import { LuGithub, LuLinkedin } from "react-icons/lu";
 
 const Home = () => {
@@ -24,7 +25,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="flex flex-col-reverse sm:flex-row items-center justify-between my-8 px-8"
+      className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 sm:gap-0 my-8 px-8"
     >
       <div className="text-container max-w-lg">
         <div className="text-header mb-2">
@@ -47,9 +48,9 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="img-container border-4 border-emerald-700 animate-morph hero-image-border-radius overflow-hidden w-full max-w-96 sm:w-96 h-96">
+      <div className="img-container border-4 border-emerald-700 bg-slate-700 animate-morph hero-image-border-radius overflow-hidden w-full max-w-96 sm:w-96 h-96">
         <img
-          className=" w-full object-center object-cover h-full z-20"
+          className=" w-full object-top object-cover h-full z-20"
           src={JayImage}
           alt="Profile photo"
         />
