@@ -1,5 +1,4 @@
 const ProjectCard = ({ project }) => {
-  console.log(project);
   return (
     <article
       key={project.id}
@@ -40,7 +39,7 @@ const ProjectCard = ({ project }) => {
               rel="noreferrer"
               className="project-btn"
             >
-              <span>{button.name}</span>
+              <span className="whitespace-nowrap">{button.name}</span>
               {button.icon}
             </a>
           ))}

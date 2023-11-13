@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -32,10 +33,11 @@ const App = () => {
         }}
       />
       <Header />
-      <main className="max-container">
+      <main className="max-container flex flex-col gap-12 overflow-hidden">
         <Home />
         <About />
         <Projects />
+        <Contact />
       </main>
     </div>
   );

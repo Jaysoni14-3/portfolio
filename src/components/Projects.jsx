@@ -81,9 +81,8 @@ const Projects = () => {
       ],
     },
   ];
-
   return (
-    <section id="projects" className="projects-section mt-12 py-8 px-8">
+    <section id="projects" className="projects-section p-8">
       <div className="section-header mb-4">
         <h2 className="text-2xl tracking-wide uppercase">Projects</h2>
       </div>

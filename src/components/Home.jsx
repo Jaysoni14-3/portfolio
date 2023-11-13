@@ -1,14 +1,9 @@
+import { LuGithub, LuLinkedin } from "react-icons/lu";
 import JayImage from "../assets/hero-bg-image.png";
 
-import { LuGithub, LuLinkedin } from "react-icons/lu";
+import { homeData } from "../Data";
 
 const Home = () => {
-  const homeData = {
-    headerText: "Front-End React Developer",
-    homeDesc:
-      "Hi, I'm Jay Soni. A passionate Front-end React Developer based in Mumbai, India.",
-  };
-
   const socialLinks = [
     {
       href: "#",
@@ -25,7 +20,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 sm:gap-0 my-8 px-8"
+      className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 sm:gap-0 mt-12 px-8"
     >
       <div className="text-container max-w-lg">
         <div className="text-header mb-2">
@@ -48,7 +43,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="img-container border-4 border-emerald-700 bg-slate-700 animate-morph hero-image-border-radius overflow-hidden w-full max-w-96 sm:w-96 h-96">
+      <div className="img-container border-4 border-emerald-700 bg-slate-700 animate-morph hero-image-border-radius overflow-hidden w-64 sm:w-96 h-auto">
         <img
           className=" w-full object-top object-cover h-full z-20"
           src={JayImage}
