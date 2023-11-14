@@ -28,7 +28,7 @@ p {
 }
 
 .project-btn {
-  @apply flex items-center font-medium text-slate-200 gap-2 p-2 hover:text-emerald-300;
+  @apply flex items-center font-medium text-slate-200 gap-2 p-2 hover:text-primary;
 }
 
 .project-image-container {
@@ -41,4 +41,9 @@ p {
 .project-image-container:hover .project-image {
   transform: translateY(calc(-100% + 330px));
   transition: 8s ease-in-out;
+}
+
+input::placeholder ,
+textarea::placeholder{
+  @apply text-sm text-slate-500
 }

@@ -24,11 +24,11 @@ const Home = () => {
     >
       <div className="text-container max-w-lg">
         <div className="text-header mb-2">
-          <h1 className="text-emerald-300  text-5xl font-medium leading-tight">
+          <h1 className="text-primary text-5xl font-medium leading-tight">
             {homeData.headerText}
           </h1>
         </div>
-        <div className="text-desc ">
+        <div className="text-desc">
           <p className="font-normal">{homeData.homeDesc}</p>
         </div>
         <div className="socials flex gap-8 mt-6">
@@ -43,7 +43,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="img-container border-4 border-emerald-700 bg-slate-700 animate-morph hero-image-border-radius overflow-hidden w-64 sm:w-96 h-auto">
+      <div className="img-container border-4 border-primary bg-slate-700 animate-morph hero-image-border-radius overflow-hidden w-64 sm:w-96 h-auto">
         <img
           className=" w-full object-top object-cover h-full z-20"
           src={JayImage}

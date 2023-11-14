@@ -84,7 +84,7 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section p-8">
       <div className="section-header mb-4">
-        <h2 className="text-2xl tracking-wide uppercase">Projects</h2>
+        <h2 className="text-2xl text-primary tracking-wider font-body uppercase">Projects</h2>
       </div>
       <div className="section-body grid gap-8">
         {projectData.map((project) => (

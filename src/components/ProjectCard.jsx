@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
         </a>
       </figure>
       <div className="project-details  sm:w-[30%]">
-        <h3 className="project-name group-hover/project-card:text-emerald-300 tracking-wide text-lg font-medium leading-snug transition-colors ease-linear">
+        <h3 className="project-name group-hover/project-card:text-primary tracking-wide text-lg font-medium leading-snug transition-colors ease-linear">
           {project.name}
         </h3>
         <p className="project-description text-base mt-4">

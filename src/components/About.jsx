@@ -8,7 +8,7 @@ const About = () => {
       {/* About section */}
       <div className="about-wrapper flex flex-col">
         <div className="section-header mb-2">
-          <h3 className="text-base text-emerald-300 tracking-wider font-body uppercase">
+          <h3 className="text-2xl text-primary tracking-wider font-body uppercase">
             About me
           </h3>
         </div>
@@ -25,7 +25,7 @@ const About = () => {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="px-4 py-2 w-max rounded-md bg-slate-800 text-slate-400 hover:text-emerald-300 hover:shadow-xl transition-colors"
+                  className="px-4 py-2 w-max rounded-md bg-slate-800 text-slate-400 hover:text-primary hover:shadow-xl transition-colors"
                 >
                   <span className="text-base whitespace-nowrap">
                     {skill.name}

@@ -5,6 +5,8 @@ import { navlinks } from "../Data";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
+import logo from "../assets/logo.svg";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,7 +18,10 @@ const Header = () => {
     <>
       <header className=" flex justify-between items-center shadow-md py-6 px-12">
         <div className="logo ">
-          <h3 className="text-white text-2xl">Jay</h3>
+          {/* <h3 className="text-white text-2xl">Jay</h3> */}
+          <figure className="w-24">
+            <img className="w-full" src={logo} alt="JAY SONI" />
+          </figure>
         </div>
         <nav className="hidden sm:flex gap-8">
           {navlinks.map((link, index) => (
