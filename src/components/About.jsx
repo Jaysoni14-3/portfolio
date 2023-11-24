@@ -1,6 +1,6 @@
 import { aboutData, skills } from "../Data";
-import Developer from "./Developer";
 import Designer from "./Designer";
+import Developer from "./Developer";
 
 const About = () => {
   return (

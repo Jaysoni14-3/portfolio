@@ -7,6 +7,8 @@ import "react-modern-drawer/dist/index.css";
 
 import logo from "../assets/logo.svg";
 
+import ResumeDoc from "../assets/Jaysoni_CV.pdf";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,6 +32,17 @@ const Header = () => {
             </li>
           ))}
         </nav>
+        <a
+          className="hidden sm:flex"
+          href={ResumeDoc}
+          download="Jay Soni Resume"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="text-slate-200  flex items-center font-medium gap-2 p-2 bg-slate-700 hover:bg-slate-800 rounded transition-colors">
+            Download resume
+          </button>
+        </a>
         <div className="button-container sm:hidden" onClick={toggleDrawer}>
           <CgMenuRight className="text-slate-200" size={32} />
         </div>
@@ -56,6 +69,16 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
+            <a
+              href={ResumeDoc}
+              download="Jay Soni Resume"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="text-slate-200  flex items-center font-medium gap-2 p-2 bg-slate-700 hover:bg-slate-800 rounded transition-colors">
+                Download resume
+              </button>
+            </a>
           </nav>
         </div>
       </Drawer>

@@ -6,12 +6,12 @@ import { homeData } from "../Data";
 const Home = () => {
   const socialLinks = [
     {
-      href: "#",
+      href: "https://www.linkedin.com/in/jay-soni-61462a227/",
       name: "linkdin",
       icon: <LuLinkedin size={24} strokeWidth={1.5} />,
     },
     {
-      href: "#",
+      href: "https://github.com/Jaysoni14-3",
       name: "github",
       icon: <LuGithub size={24} strokeWidth={1.5} />,
     },
@@ -36,6 +36,8 @@ const Home = () => {
             <a
               key={index}
               href={link.href}
+              target="_blank"
+              rel="noreferrer"
               className="text-slate-400 p-2 hover:text-white"
             >
               {link.icon}
@@ -43,7 +45,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="img-container border-4 border-primary bg-slate-700 animate-morph hero-image-border-radius overflow-hidden w-64 sm:w-96 h-auto">
+      <div className="img-container border-4 border-slate-400 bg-slate-700 animate-morph hero-image-border-radius overflow-hidden w-64 sm:w-96 h-auto">
         <img
           className=" w-full object-top object-cover h-full z-20"
           src={JayImage}

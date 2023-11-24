@@ -1,7 +1,8 @@
 import { LuExternalLink, LuGithub } from "react-icons/lu";
 
-import shreejiMumbaiImage from "../assets/project-shreeji.png";
 import aanimeHubImage from "../assets/project-aanime-hub.png";
+import exclusive from "../assets/project-exclusive-e-commerce.png";
+import shreejiMumbaiImage from "../assets/project-shreeji.png";
 import themoviedbwebImage from "../assets/project-themoviedb.png";
 
 import ProjectCard from "./ProjectCard";
@@ -58,6 +59,30 @@ const Projects = () => {
     },
     {
       id: 3,
+      name: "Exclusive",
+      url: "https://exclusive-shop.netlify.app/",
+      image: exclusive,
+      imageAlt: "Exclusive e-commerce website image",
+      description:
+        "Explore the user-friendly online store—it's designed for easy navigation, modern convenience, and your ultimate satisfaction.",
+      tools: ["React", "Redux toolkit", "Tailwind css", "Figma"],
+      buttons: [
+        {
+          id: 1,
+          href: "https://github.com/Jaysoni14-3/exclusive-e-com",
+          name: "Code",
+          icon: <LuGithub size={24} strokeWidth={1} />,
+        },
+        {
+          id: 2,
+          href: "https://exclusive-shop.netlify.app",
+          name: "Visit website",
+          icon: <LuExternalLink size={24} strokeWidth={1} />,
+        },
+      ],
+    },
+    {
+      id: 4,
       name: "The MovieDb web",
       url: "https://themoviedbweb.netlify.app/home.html",
       image: themoviedbwebImage,
@@ -84,7 +109,12 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section p-8">
       <div className="section-header mb-4">
-        <h2 className="text-2xl text-primary tracking-wider font-body uppercase">Projects</h2>
+        <h2 className="text-2xl text-primary tracking-wider font-body uppercase">
+          Projects
+        </h2>
+        <p className="text-sm">
+          (Hover the image to view the preview of website )
+        </p>
       </div>
       <div className="section-body grid gap-8">
         {projectData.map((project) => (

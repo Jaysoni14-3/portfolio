@@ -22,7 +22,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="contact p-8">
+    <section id="contact" className="contact p-8">
       <div className="section-header mb-4">
         <h2 className="text-2xl text-primary tracking-wider font-body uppercase">
           Contact
@@ -33,7 +33,7 @@ const Contact = () => {
           <div className="flex flex-col">
             <h2 className="text-xl mb-4">Send me a message!</h2>
             <p>
-              Got a question or proposal, or just want to say hello? Go ahead.
+              Got a question or proposal,<br /> or just want to say hello? Go ahead.
             </p>
           </div>
           <div className="icons-container flex gap-4 mt-6">
