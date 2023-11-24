@@ -5,24 +5,24 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 
-import { isMobile } from "react-device-detect";
-
 const App = () => {
+  let isMobile;
+  const width = window.innerWidth;
+
+  width < "768" ? (isMobile = true) : (isMobile = false);
+
   return (
-    <div className="bg-dark">
+    <div className="bg-light dark:bg-dark">
       {/*  <div className="bg-slate-50"> */}
-      {/* If portfolio is opened on a device with mouse then render the animated mouse package  */}
       {isMobile ? (
         <AnimatedCursor
-          innerSize={16}
-          outerSize={16}
+          showSystemCursor={true}
+          innerSize={0}
+          outerSize={0}
           color="243, 156, 18"
           outerAlpha={0}
           innerScale={0}
           outerScale={0}
-          outerStyle={{
-            mixBlendMode: "exclusion",
-          }}
         />
       ) : (
         <AnimatedCursor

@@ -1,16 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CgClose, CgMenuRight } from "react-icons/cg";
 import { navlinks } from "../Data";
 
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
+import { LuMoon, LuSunMedium } from "react-icons/lu";
 import logo from "../assets/logo.svg";
 
-import ResumeDoc from "../assets/Jaysoni_CV.pdf";
-
 const Header = () => {
+  const [darkMode, setDarkMode] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  // console.log(darkMode);
+
+  useEffect(() => {
+    const isDarkMode = localStorage.getItem("darkMode");
+    setDarkMode(isDarkMode);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
@@ -18,33 +33,41 @@ const Header = () => {
 
   return (
     <>
-      <header className=" flex justify-between items-center shadow-md py-6 px-12">
+      <header className="z-50 flex justify-between items-center shadow-md py-6 px-12">
         <div className="logo ">
-          {/* <h3 className="text-white text-2xl">Jay</h3> */}
           <figure className="w-24">
             <img className="w-full" src={logo} alt="JAY SONI" />
           </figure>
         </div>
-        <nav className="hidden sm:flex gap-8">
+        <nav className="hidden sm:flex items-center gap-8">
           {navlinks.map((link, index) => (
-            <li className="list-none text-neutral-100 text-lg" key={index}>
+            <li
+              className="list-none text-neutral-800 dark:text-neutral-100 text-lg"
+              key={index}
+            >
               <a href={link.href}>{link.name}</a>
             </li>
           ))}
-        </nav>
-        <a
-          className="hidden sm:flex"
-          href={ResumeDoc}
-          download="Jay Soni Resume"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="text-slate-200  flex items-center font-medium gap-2 p-2 bg-slate-700 hover:bg-slate-800 rounded transition-colors">
-            Download resume
+          <button
+            className="text-neutral-800 dark:text-neutral-200 px-2 py-1 rounded"
+            onClick={toggleDarkMode}
+          >
+            {darkMode ? <LuSunMedium size={24} /> : <LuMoon size={24} />}
           </button>
-        </a>
-        <div className="button-container sm:hidden" onClick={toggleDrawer}>
-          <CgMenuRight className="text-slate-200" size={32} />
+        </nav>
+
+        <div className="button-container flex gap-4 sm:hidden">
+          <button
+            className="text-neutral-800 dark:text-neutral-200 px-2 py-1 rounded"
+            onClick={toggleDarkMode}
+          >
+            {darkMode ? <LuSunMedium size={24} /> : <LuMoon size={24} />}
+          </button>
+          <CgMenuRight
+            onClick={toggleDrawer}
+            className="text-slate-800 dark:text-slate-200"
+            size={32}
+          />
         </div>
       </header>
       <Drawer
@@ -69,16 +92,6 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <a
-              href={ResumeDoc}
-              download="Jay Soni Resume"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="text-slate-200  flex items-center font-medium gap-2 p-2 bg-slate-700 hover:bg-slate-800 rounded transition-colors">
-                Download resume
-              </button>
-            </a>
           </nav>
         </div>
       </Drawer>

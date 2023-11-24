@@ -1,7 +1,7 @@
-import { useState } from "react";
 import axios from "axios";
+import { useState } from "react";
 
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 
 const FormComponent = () => {
@@ -45,7 +45,7 @@ const FormComponent = () => {
   };
 
   return (
-    <div>
+    <>
       <Formik
         initialValues={{
           name: "",
@@ -58,11 +58,14 @@ const FormComponent = () => {
         <Form className="flex flex-col gap-4 w-full">
           <div className="flex flex-col md:flex-row w-full gap-4">
             <div className="flex flex-col w-full">
-              <label className="text-slate-200 text-base" htmlFor="name">
+              <label
+                className=" text-slate-700 dark:text-slate-200 text-base"
+                htmlFor="name"
+              >
                 Your Name
               </label>
               <Field
-                className="px-2 py-1 text-base mt-1 bg-slate-900 border-b text-white rounded w-full"
+                className="px-2 py-1 text-base mt-1 bg-slate-100 dark:bg-slate-900 border-b text-white rounded w-full"
                 type="text"
                 name="name"
                 id="name"
@@ -75,11 +78,14 @@ const FormComponent = () => {
               />
             </div>
             <div className="flex flex-col w-full">
-              <label className="text-slate-200 text-base" htmlFor="email">
+              <label
+                className="text-slate-700 dark:text-slate-200 text-base"
+                htmlFor="email"
+              >
                 Email Address
               </label>
               <Field
-                className="px-2 py-1 text-base mt-1 bg-slate-900 border-b text-white rounded w-full"
+                className="px-2 py-1 text-base mt-1 bg-slate-100 dark:bg-slate-900 border-b text-white rounded w-full"
                 type="email"
                 id="email"
                 name="email"
@@ -93,7 +99,10 @@ const FormComponent = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            <label className="text-slate-200 text-base" htmlFor="message">
+            <label
+              className="text-slate-700 dark:text-slate-200 text-base"
+              htmlFor="message"
+            >
               Your Message
             </label>
             <Field
@@ -101,7 +110,7 @@ const FormComponent = () => {
               name="message"
               id="message"
               rows="2"
-              className="px-2 py-1 text-base mt-1 bg-slate-900 border-b text-white w-full rounded"
+              className="px-2 py-1 text-base mt-1 bg-slate-100 dark:bg-slate-900 border-b text-white w-full rounded"
               placeholder="Message"
             ></Field>
             <ErrorMessage
@@ -113,7 +122,7 @@ const FormComponent = () => {
           <div className="button-container ms-auto mt-4">
             <button
               type="submit"
-              className="px-4 py-2 bg-primary border-0 w-max rounded text-slate-950 font-medium text-lg "
+              className="px-4 py-2 bg-primary border-0 w-max rounded text-slate-50 dark:text-slate-950 font-medium text-lg "
             >
               Submit
             </button>
@@ -125,7 +134,7 @@ const FormComponent = () => {
           )}
         </Form>
       </Formik>
-    </div>
+    </>
   );
 };
 

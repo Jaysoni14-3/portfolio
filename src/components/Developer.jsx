@@ -15,7 +15,7 @@ const Developer = () => {
         </figure>
       </div>
       <div className="text-container md:w-1/2 py-3 rounded-lg">
-        <h3 className="text-xl mb-2 text-slate-300">Developer</h3>
+        <h3 className="text-xl mb-2">Developer</h3>
         <p className="text-base ">{developerData.developerParagraph}</p>
       </div>
     </div>

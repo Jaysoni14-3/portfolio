@@ -2,7 +2,7 @@ const ProjectCard = ({ project }) => {
   return (
     <article
       key={project.id}
-      className="group/project-card project-card flex flex-col sm:flex-row bg-slate-950 hover:bg-slate-800  gap-10 rounded-xl p-6 transition-colors ease-linear hover:shadow-lg"
+      className="group/project-card project-card flex flex-col sm:flex-row bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 gap-10 rounded-xl p-6 transition-all ease-linear hover:shadow-lg"
     >
       <figure className="project-image-container sm:w-[70%] rounded-md overflow-hidden ">
         <img
@@ -23,7 +23,7 @@ const ProjectCard = ({ project }) => {
             {project.tools.map((tool, index) => (
               <p
                 key={index}
-                className="text-slate-100 text-base whitespace-nowrap shadow-sm shadow-slate-950 rounded-sm px-2"
+                className="text-slate-900 dark:text-slate-100 text-base whitespace-nowrap shadow-sm shadow-slate-400 dark:shadow-slate-950 rounded-sm px-2"
               >
                 {tool}
               </p>
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
               rel="noreferrer"
               className="project-btn"
             >
-              <span className="whitespace-nowrap">{button.name}</span>
+              <span className=" whitespace-nowrap">{button.name}</span>
               {button.icon}
             </a>
           ))}

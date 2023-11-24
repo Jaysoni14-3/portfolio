@@ -112,9 +112,7 @@ const Projects = () => {
         <h2 className="text-2xl text-primary tracking-wider font-body uppercase">
           Projects
         </h2>
-        <p className="text-sm">
-          (Hover the image to view the preview of website )
-        </p>
+        <p className="text-sm">(Hover the image to preview the website)</p>
       </div>
       <div className="section-body grid gap-8">
         {projectData.map((project) => (

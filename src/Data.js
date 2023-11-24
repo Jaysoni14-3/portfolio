@@ -28,7 +28,7 @@ export const developerData = {
     "A front-end developer excited about diving into the ever-evolving realm of web development. I've got a solid grip on HTML, CSS, and JavaScript, and I'm ready to bring my skills and creativity to exciting and groundbreaking projects. I'm passionate about creating engaging websites that not only look good but also offer seamless user experiences.",
 };
 
-export const skills = [
+export const skillsData = [
   { name: "React" },
   { name: "Redux" },
   { name: "JavaScript" },

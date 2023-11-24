@@ -33,7 +33,8 @@ const Contact = () => {
           <div className="flex flex-col">
             <h2 className="text-xl mb-4">Send me a message!</h2>
             <p>
-              Got a question or proposal,<br /> or just want to say hello? Go ahead.
+              Got a question or proposal,
+              <br /> or just want to say hello? Go ahead.
             </p>
           </div>
           <div className="icons-container flex gap-4 mt-6">
@@ -43,14 +44,14 @@ const Contact = () => {
                 href={socialIcon.href}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 text-slate-400 hover:text-primary"
+                className="p-2 text-slate-600 dark:text-slate-400 dark:hover:text-primary hover:text-primary"
               >
                 {socialIcon.iconName}
               </a>
             ))}
           </div>
         </div>
-        <div className=" w-full md:w-1/2 mx-auto bg-slate-950 p-4 rounded-lg">
+        <div className=" w-full md:w-1/2 mx-auto bg-slate-300 dark:bg-slate-950 p-4 rounded-lg">
           <FormComponent />
         </div>
       </div>
