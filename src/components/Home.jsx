@@ -1,5 +1,8 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import ResumeDoc from "../assets/Jaysoni_CV.pdf";
 import JayImage from "../assets/hero-bg-image.png";
+import JayImageCompressed from "../assets/jay-compressed.jpg";
 
 import { homeData } from "../Data";
 
@@ -33,9 +36,11 @@ const Home = () => {
         </div>
       </div>
       <div className="img-container border-4 border-slate-400 bg-slate-700 animate-morph hero-image-border-radius overflow-hidden w-64 sm:w-96 h-auto">
-        <img
-          className=" w-full object-top object-cover h-full z-20"
+        <LazyLoadImage
           src={JayImage}
+          PlaceholderSrc={JayImageCompressed}
+          effect="blur"
+          className=" w-full object-top object-cover h-full z-20"
           alt="Profile photo"
         />
       </div>

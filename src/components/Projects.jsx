@@ -1,8 +1,12 @@
 import { LuExternalLink, LuGithub } from "react-icons/lu";
 
+import aanimeHubImageCompressed from "../assets/project-aanime-hub-compressed.jpg";
 import aanimeHubImage from "../assets/project-aanime-hub.png";
+import exclusiveCompressed from "../assets/project-exclusive-e-commerce-compressed.jpg";
 import exclusive from "../assets/project-exclusive-e-commerce.png";
+import shreejiMumbaiImageCompressed from "../assets/project-shreeji-compressed.jpg";
 import shreejiMumbaiImage from "../assets/project-shreeji.png";
+import themoviedbwebImageCompressed from "../assets/project-themoviedb-compressed.jpg";
 import themoviedbwebImage from "../assets/project-themoviedb.png";
 
 import ProjectCard from "./ProjectCard";
@@ -14,6 +18,7 @@ const Projects = () => {
       name: "Shreeji Mumbai",
       url: "https://shreejimumbai.com",
       image: shreejiMumbaiImage,
+      compressedImage: shreejiMumbaiImageCompressed,
       imageAlt: "Shreeji mumbai website image",
       description:
         "Conceptualized and created a modern and user-friendly website for Shreeji Mumbai, showcasing their swimming pool design and maintenance services.",
@@ -38,6 +43,7 @@ const Projects = () => {
       name: "Aanime Hub",
       url: "https://aanime-hub.netlify.app/",
       image: aanimeHubImage,
+      compressedImage: aanimeHubImageCompressed,
       imageAlt: "Anime hub website image",
       description:
         "Designed and developed the AnimeHub website to provide a seamless and engaging experience for anime enthusiasts",
@@ -62,6 +68,7 @@ const Projects = () => {
       name: "Exclusive",
       url: "https://exclusive-shop.netlify.app/",
       image: exclusive,
+      compressedImage: exclusiveCompressed,
       imageAlt: "Exclusive e-commerce website image",
       description:
         "Explore the user-friendly online store—it's designed for easy navigation, modern convenience, and your ultimate satisfaction.",
@@ -86,6 +93,7 @@ const Projects = () => {
       name: "The MovieDb web",
       url: "https://themoviedbweb.netlify.app/home.html",
       image: themoviedbwebImage,
+      compressedImage: themoviedbwebImageCompressed,
       imageAlt: "Movie DB website image",
       description:
         "Designed and developed the moviedbweb website to provide an immersive and informative experience for movie enthusiasts.",
@@ -106,6 +114,7 @@ const Projects = () => {
       ],
     },
   ];
+
   return (
     <section id="projects" className="projects-section p-8">
       <div className="section-header mb-4">
