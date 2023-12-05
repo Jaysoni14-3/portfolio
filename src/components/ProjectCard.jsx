@@ -1,4 +1,3 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ProjectCard = ({ project }) => {
@@ -8,11 +7,9 @@ const ProjectCard = ({ project }) => {
       className="group/project-card project-card flex flex-col sm:flex-row bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 gap-10 rounded-xl p-6 transition-all ease-linear hover:shadow-lg"
     >
       <figure className="project-image-container sm:w-[70%] rounded-md overflow-hidden ">
-        <LazyLoadImage
+        <img
           src={project.image}
-          PlaceholderSrc={project.compressedImage}
           alt={project.imageAlt}
-          effect="blur"
           className="project-image w-full h-auto object-cover"
         />
       </figure>

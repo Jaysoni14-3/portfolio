@@ -26,7 +26,7 @@ const Projects = () => {
       buttons: [
         {
           id: 1,
-          href: "https://github.com/Jaysoni14-3/animeHub",
+          href: "https://github.com/Jaysoni14-3/shreeji",
           name: "Code",
           icon: <LuGithub size={24} strokeWidth={1} />,
         },
@@ -51,7 +51,7 @@ const Projects = () => {
       buttons: [
         {
           id: 1,
-          href: "https://github.com/Jaysoni14-3/shreeji",
+          href: "https://github.com/Jaysoni14-3/animeHub",
           name: "Code",
           icon: <LuGithub size={24} strokeWidth={1} />,
         },

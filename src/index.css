@@ -35,12 +35,12 @@ p {
   display: block;
   max-height: 330px;
   transform: translateY(0);
-  transition: 8s ease-in-out;
+  transition: all 8s ease-in-out;
 }
 
 .project-image-container:hover .project-image {
   transform: translateY(calc(-100% + 330px));
-  transition: 8s ease-in-out;
+  transition: all 8s ease-in;
 }
 
 input::placeholder,
