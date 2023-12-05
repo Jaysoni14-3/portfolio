@@ -1,4 +1,10 @@
-import { LuInstagram, LuLinkedin, LuMail, LuPhone } from "react-icons/lu";
+import {
+  LuGithub,
+  LuInstagram,
+  LuLinkedin,
+  LuMail,
+  LuPhone,
+} from "react-icons/lu";
 import FormComponent from "./FormComponent";
 
 const Contact = () => {
@@ -18,6 +24,10 @@ const Contact = () => {
     {
       iconName: <LuPhone size={24} strokeWidth={1.5} />,
       href: "tel:+91 8424 93 6900",
+    },
+    {
+      iconName: <LuGithub size={24} strokeWidth={1.5} />,
+      href: "https://github.com/Jaysoni14-3",
     },
   ];
 
